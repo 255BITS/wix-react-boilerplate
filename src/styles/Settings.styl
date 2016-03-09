@@ -1,0 +1,193 @@
+/* Base Wix Settings Styles */
+#settings-content
+  margin:0
+  padding:0
+  color: #296d86;
+
+header.box
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0;
+  background-image: url(/images/banner.png);
+  background-repeat: none;
+  padding: 10px 20px 0px 225px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  height: 127px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+
+
+header.intro
+  .description
+    font-size: 14px
+    position: absolute
+    line-height: 20px
+    font-family: HelveticaNeueW01-45Ligh,HelveticaNeueW02-45Ligh,HelveticaNeueW10-45Ligh,sans-serif;
+    padding-right: 20px
+  .header-buttons
+    position: absolute
+    top: 100px
+    .btn-upgrade
+      outline: 0;
+      border: 0;
+      border-radius: 16px;
+      background-color: #aa4dc8;
+      padding: 0 30px;
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      color: #fff;
+      font-family: HelveticaNeueW01-45Ligh,HelveticaNeueW02-45Ligh,HelveticaNeueW10-45Ligh,sans-serif;
+      font-size: 14px;
+
+.uilib-tabs
+  border: 1px solid #caedff;
+  border-radius: 8px;
+  overflow: hidden;
+
+.uilib-tabs .tab-content>div.tab-pane.border {
+  border: 0;
+}
+.uilib-tabs ul>li.ui-lib-tab>div {
+  margin: 0;
+  border: 0;
+  border-right: 1px solid #caedff;
+  border-bottom: 1px solid #caedff;
+  background: 0 #eaf7ff;
+  padding: 16px 0;
+  color: #085673;
+}
+.uilib-tabs ul>li.ui-lib-tab>div {
+  font-size: 13px;
+  font-family: Helvetica-W01-Light,Helvetica Neue,Helvetica,Arial;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  text-shadow: none;
+  -webkit-box-shadow: inset 1px 2px rgba(255,255,255,.21);
+  -moz-box-shadow: inset 1px 2px rgba(255,255,255,.21);
+  box-shadow: inset 1px 2px rgba(255,255,255,.21);
+}
+.uilib-tabs ul>li.ui-lib-tab.selected>div {
+  background-color: #fff;
+}
+.uilib-tabs ul>li.ui-lib-tab {
+  width: 33.33333%;
+}
+
+
+.wix-label
+  clear: both;
+.wix-label-label
+  height:30px
+  font-size: 14px
+  font-family: HelveticaNeueW01-45Ligh,HelveticaNeueW02-45Ligh,HelveticaNeueW10-45Ligh,sans-serif;
+  float: left
+.wix-label-content
+  margin-right:0px
+  top:-6px
+  float: left
+
+.wix-label.section
+  .wix-label-label
+    margin-bottom: 1em
+  .wix-label-content
+    margin-bottom: 1em
+
+.wix-label.option
+  .wix-label-label
+  .wix-label-content
+    margin-bottom:0
+
+.btn-add-edit
+  outline: 0;
+  border: 0;
+  border-radius: 16px;
+  background-color: #0099ef;
+  cursor: pointer;
+  padding: 0 16px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-family: HelveticaNeueW01-45Ligh,HelveticaNeueW02-45Ligh,HelveticaNeueW10-45Ligh,sans-serif;
+  font-size: 14px;
+
+h2
+  margin-bottom: 1.4em
+  margin-bottom: 0.3em
+
+.indent
+  margin-left: 20px
+
+button.disabled
+  background-color: #aaa !important;
+
+.settings-section
+  overflow: auto
+
+.offset-input
+  margin-left:80px
+.question
+  overflow: auto
+  font-size: 150%
+  padding-bottom: 20px
+  padding-top: 20px
+  input[type='text']
+    width: 100%
+
+.clearfix
+  clear: both
+
+// WixReact
+border-color= #ccc
+layout-padding=0.75em
+figure.wix-layout-option:first
+  margin-left:0px
+figure.wix-layout-option.active
+  box-shadow: rgb(50, 134, 238) 0px 0px 0px 2px
+figure.wix-layout-option
+  cursor:pointer
+  float:left
+  width: 110px
+  margin:8px
+  padding-bottom: layout-padding
+  border: 1px solid border-color
+  border-radius: 8px
+  text-align:center
+  figcaption
+    padding-top: layout-padding
+  img
+    width: 80px
+    height: 64px
+    margin: 8px
+    margin-bottom:0px
+    margin-top:layout-padding
+    border-bottom: 1px solid border-color
+
+.clearfix
+  clear: both;
+
+.hide
+  display: none
+
+
+.design-label
+  padding: 0
+  margin-top:0
+  margin-bottom:0
+  margin-left: 6px
+
+
+.design .wix-label-label
+  width:40%

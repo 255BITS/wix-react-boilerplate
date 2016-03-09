@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title Votes
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <script type="text/javascript" src="//static.parastorage.com/services/js-sdk/1.61.0/js/wix.min.js"></script>
+    script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")
+    style(wix-style="").
+      body {
+        background: {{style.bgColor color-1}};
+      }
+      .choices {
+        color: {{style.textColor color-5}};
+        {{style.font Body-M}}
+      }
+      button {
+        color: {{style.buttonTextColor color-1}};
+        background-color: {{style.buttonColor color-8}};
+        {{style.buttonFont Heading-S}}
+      }
+      button:hover {
+        background: {{style.buttonHoverColor color-7}};
+        cursor: pointer;
+      }
+      .question {
+        background: {{style.headerBg color-5}};
+        color: {{style.headerColor color-1}};
+        {{style.headerFont Heading-L}}
+      }
+ 
+ 
+  body(style="display: none")
+    <div id="votes-content"><div id="app">NOT REPLACED`</div></div>
+    input#votes(type="hidden", value=JSON.stringify(votes))
+    input#poll(type="hidden", value=JSON.stringify(poll))
+    <script>__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__</script>
+    <script src="//cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js"></script>
+    <script type="text/javascript" src="assets/app.js"></script>
+    script.
+      $(function(){
+        $("body").show();
+      });
+ 

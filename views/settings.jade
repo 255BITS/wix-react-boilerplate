@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")
+    <script type="text/javascript" src="//static.parastorage.com/services/js-sdk/1.61.0/js/wix.min.js"></script>
+    link(rel="stylesheet", href="./vendor/wix-ui-lib/ui-lib.min.css")
+    <script type="text/javascript" src="./vendor/wix-ui-lib/ui-lib.min.js"></script>
+    title Settings
+  body(style="display:none")
+    <div id="settings-content"><div id="app"></div></div>
+    input#settings(type="hidden", value=JSON.stringify(settings))
+    input#poll(type="hidden", value=JSON.stringify(poll))
+    <script>__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__</script>
+    <script src="//cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js"></script>
+    <script type="text/javascript" src="assets/app.js"></script>
+    script.
+      $(function(){
+        Wix.UI.initialize();
+        Wix.UI.onChange('*', function(k,v){
+          saveSettings();
+        });
+        $("body").show();
+      });
+      function filterSettings(settings) {
+        var result = settings;
+        if(settings.answersJson) {
+          result.answers= JSON.parse(settings.answersJson);
+        }
+        if(settings.textAndImageAnswersJson) {
+          result.textAndImageAnswers= JSON.parse(settings.textAndImageAnswersJson);
+        }
+        if(settings.imageAnswersJson) {
+          result.imageAnswers= JSON.parse(settings.imageAnswersJson);
+        }
+        return result
+      }
+      function saveSettings(settings) {
+        if(settings === undefined) {
+          settings = Wix.UI.toJSON();
+        }
+        var filteredSettings = filterSettings(settings);
+        var location = window.location.href;
+        var url = location.replace('settings', 'save');
+        $.ajax({type: "POST", url: url, data:{settings:filteredSettings}, success: function(data) {
+          if(data.error) {
+            $("#error").html(data.error).show();
+            return;
+          }
+          Wix.Settings.refreshApp();
+        }}
+        );
+      }
+
+
+
