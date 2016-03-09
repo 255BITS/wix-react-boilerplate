@@ -1,5 +1,8 @@
 # Wix React Boilerplate
 
+![Screenshot of boilerplate]
+(/public/images/boilerplate-screenshot.png)
+
 ## The fastest way to start developing for Wix using React
 
 ## Features
