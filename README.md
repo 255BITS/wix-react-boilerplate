@@ -10,7 +10,7 @@
 * webpack-hot-reload-module - Your changes are reflected instantly
 * webpack support for both client and serverside es6 and beyond
 * Dockerfile for simple and powerful deployment and scaling
-* database agnostic
+* Database agnostic
 * Custom UI components built for creating good user experiences in Wix.
 * Default styles for Settings and Dashboard
 * Wix middleware that will parse wix instance into req.wix
